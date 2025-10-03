@@ -1,0 +1,5 @@
+Student name: Rei Serana
+Student number: 746462
+Student class: HAIT25FT1C
+GitHub Repository: https://github.com/ReiSerana/my-new-repo.git
+GitHub Pages URL: your github pages URL

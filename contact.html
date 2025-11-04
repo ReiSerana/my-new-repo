@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Your Name">
+    <meta name="description" content="A short description of this page (50–160 characters).">
+    <meta name="keywords" content="keyword1, keyword2, keyword3, keyword4, keyword5">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Contact Page - KidSpotZ</title>
+</head>
+
+<body>
+          <div class="page-container">
+    <header>
+        <div class="logo-title">
+    <img src="img/ChatGPT Image Oct 13, 2025, 02_02_01 PM.png" alt="KidSpotZ Logo" class="site-logo">
+    <h1 class="site-title">KidSpotZ</h1>
+  </div>
+
+    <!-- Hamburger toggle -->
+  <input type="checkbox" id="menu-toggle" />
+  <label for="menu-toggle" class="hamburger">&#9776;</label>
+  
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="detail1.html">Detail 1</a></li>
+                <li><a href="detail2.html">Detail 2</a></li>
+                <li><a href="detail3.html">Detail 3</a></li>
+                <li><a href="detail4.html">Detail 4</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+    <div class="contact-header">
+        <h2>Contact Us</h2>
+        <h4>You can share your further questions and your valuable opinions if</h4>
+        <h4>there are any updates required and we will try our best to act</h4>
+        <h4>accordingly. Thank You!</h4>
+    </div>
+
+    <div class="mandatory-box">
+        Fields with * are mandatory
+    </div>
+
+    <form method="post" action="https://next-app-router-playground-kohl.vercel.app/api/contact">
+
+        <div class="form-row">
+            <label for="name">Name *</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-row">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-row">
+            <label for="phone">Phone *</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+
+        <div class="form-row">
+            <label for="message ">Message *</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+
+        <div class="form-submit">
+            <input type="submit" value="Send Message">
+        </div>
+
+    </form>
+</section>
+    </main>
+    </div>
+
+<footer> 
+    <nav class="footer-nav">
+        <a href="contact.html" class="footer-left">Contact</a>
+        <p class="footer-right">&copy; All Rights Reserved</p>
+    </nav>
+</footer>
+</body>
+</html>

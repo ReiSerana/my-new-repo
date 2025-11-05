@@ -10,79 +10,77 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Contact Page - KidSpotZ</title>
 </head>
-
 <body>
-          <div class="page-container">
-    <header>
-        <div class="logo-title">
-    <img src="img/ChatGPT Image Oct 13, 2025, 02_02_01 PM.png" alt="KidSpotZ Logo" class="site-logo">
-    <h1 class="site-title">KidSpotZ</h1>
-  </div>
+
+<header>
+    <img src="img/ChatGPT Image Oct 13, 2025, 02_02_01 PM.png" alt="KidSpotZ Logo" class="site-logo" style="width:76px; height:76px;">
+    <h1 class="site-title" style="display:inline-block; margin-left:10px; color:white;">KidSpotZ</h1>
 
     <!-- Hamburger toggle -->
-  <input type="checkbox" id="menu-toggle" />
-  <label for="menu-toggle" class="hamburger">&#9776;</label>
-  
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="detail1.html">Detail 1</a></li>
-                <li><a href="detail2.html">Detail 2</a></li>
-                <li><a href="detail3.html">Detail 3</a></li>
-                <li><a href="detail4.html">Detail 4</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section>
-    <div class="contact-header">
+    <input type="checkbox" id="menu-toggle" />
+    <label for="menu-toggle" class="hamburger">&#9776;</label>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="detail1.html">Detail 1</a></li>
+            <li><a href="detail2.html">Detail 2</a></li>
+            <li><a href="detail3.html">Detail 3</a></li>
+            <li><a href="detail4.html">Detail 4</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="contact-header" style="text-align:center; margin:30px 0;">
         <h2>Contact Us</h2>
         <h4>You can share your further questions and your valuable opinions if</h4>
         <h4>there are any updates required and we will try our best to act</h4>
         <h4>accordingly. Thank You!</h4>
-    </div>
+    </section>
 
-    <div class="mandatory-box">
+    <section class="mandatory-box" style="width:295px; height:50px; background-color:#C0C6D8; display:flex; align-items:center; justify-content:center; margin:0 auto 25px auto; font-weight:bold; border-radius:8px;">
         Fields with * are mandatory
-    </div>
+    </section>
 
-    <form method="post" action="https://next-app-router-playground-kohl.vercel.app/api/contact">
+    <form method="post" action="https://next-app-router-playground-kohl.vercel.app/api/contact" onsubmit="showSuccessMessage(event)" style="max-width:500px; margin:0 auto; text-align:center;">
+        <label for="name">Name *</label>
+        <input type="text" id="name" name="name" required style="width:100%; padding:8px; margin-bottom:15px;">
 
-        <div class="form-row">
-            <label for="name">Name *</label>
-            <input type="text" id="name" name="name" required>
-        </div>
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" required style="width:100%; padding:8px; margin-bottom:15px;">
 
-        <div class="form-row">
-            <label for="email">Email *</label>
-            <input type="email" id="email" name="email" required>
-        </div>
+        <label for="phone">Phone *</label>
+        <input type="tel" id="phone" name="phone" required style="width:100%; padding:8px; margin-bottom:15px;">
 
-        <div class="form-row">
-            <label for="phone">Phone *</label>
-            <input type="tel" id="phone" name="phone" required>
-        </div>
+        <label for="message">Message *</label>
+        <textarea id="message" name="message" rows="5" required style="width:100%; padding:8px; margin-bottom:15px;"></textarea>
 
-        <div class="form-row">
-            <label for="message ">Message *</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-        </div>
-
-        <div class="form-submit">
-            <input type="submit" value="Send Message">
-        </div>
-
+        <input type="submit" value="Send Message" style="padding:0.75em 1.5em; background-color:#2C2C2C; color:white; border:none; border-radius:0.5em; cursor:pointer;">
     </form>
-</section>
-    </main>
-    </div>
 
-<footer> 
-    <nav class="footer-nav">
-        <a href="contact.html" class="footer-left">Contact</a>
-        <p class="footer-right">&copy; All Rights Reserved</p>
+    <p id="success-message" style="display:none; color:white; background-color:green; padding:10px; margin:20px auto; width:fit-content; border-radius:5px; text-align:center;">Message sent successfully!</p>
+</main>
+
+<footer>
+    <nav style="display:flex; justify-content:space-between; align-items:center; padding:10px 20px; background-color:#0A9C97;">
+        <a href="contact.html" style="color:white; text-decoration:none; font-weight:bold; padding:5px 10px; border:2px solid white; border-radius:5px;">Contact</a>
+        <p style="color:white; margin:0;">&copy; All Rights Reserved</p>
     </nav>
 </footer>
+
+<script>
+function showSuccessMessage(event) {
+    event.preventDefault(); // prevent default form submission
+    document.getElementById('success-message').style.display = 'block';
+    // optionally clear form fields
+    document.getElementById('name').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('phone').value = '';
+    document.getElementById('message').value = '';
+}
+</script>
+
 </body>
 </html>
